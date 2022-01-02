@@ -6,6 +6,11 @@ body {
   background-color: #eee;
 }
 
+.back-home img {
+  width: 28px;
+  height: 28px;
+}
+
 .new-table-input {
   min-height: 40px;
   border-radius: 4px;
@@ -56,4 +61,99 @@ hr {
 }
 
 /* Table styles */
+.table__container {
+  background: #eee;
+  padding: 20px;
+  overflow-y: scroll;
+}
+
+.fileinfo, .textinfo, .textedfit {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  gap: 15px;
+  margin: 15px 0;
+}
+
+.fileinfo__name {
+  padding: 5px 10px;
+  border: 1px solid gray;
+  font-size: 16px;
+  width: 200px;
+}
+
+.fileinfo__smallbtn,
+.textinfo__smallbtn,
+.textedfit__smallbtn {
+  border: 1px solid gray;
+  padding: 0px 8px;
+  cursor: pointer;
+}
+
+.fileinfo__smallbtn img,
+.textinfo__smallbtn img,
+.textedfit__smallbtn img {
+  width: 18px;
+  height: 18px;
+  vertical-align: middle;
+}
+
+.textinfo__smallbtn,
+.textedfit__smallbtn {
+  padding: 5px 8px;
+}
+
+.textedfit__field {
+  width: 100%;
+  border: 1px solid #ccc;
+  padding: 0px 15px;
+}
+
+.table {
+  border: 1px solid black;
+  width: 100%;
+  display: table;
+}
+
+.table .row {
+  display: table-row;
+}
+
+.table .row .cell {
+  height: 21px;
+  min-width: 70px;
+  width: 70px;
+  resize: both;
+  overflow: auto;
+  display: table-cell;
+  text-align: center;
+  border: 0.5px solid #b5b5b5;
+}
+
+.table .row .cell.active {
+  border: 1px solid black;
+}
+
+.table .row .cell.bold {
+  font-weight: 900;
+}
+
+.table .row .cell.italic {
+  font-style: italic;
+}
+
+.table .row .cell.align-left {
+  text-align: left;
+}
+
+.table .row .cell.align-center {
+  text-align: center;
+}
+
+.table .row .cell.align-right {
+  text-align: right;
+}
 /*# sourceMappingURL=main.css.map */

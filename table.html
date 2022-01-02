@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./src/styles/header.styles.css" />
     <link rel="stylesheet" href="./src/styles/common.css" />
+    <link rel="stylesheet" href="./src/styles/main.css" />
     <title>Table</title>
   </head>
   <body>
@@ -13,15 +14,72 @@
       <div class="container">
         <header class="header">
           <div class="app-name">Excel Dashboard</div>
-          <a href="index.html" class="back-home">Home</a>
+          <a href="index.html" class="back-home"><img src="./src/img/home.png" alt="Home"></a>
         </header>
       </div>
     </div>
-    <main id="table" class="table">
+    <main>
       <div class="tables-list"></div>
       <div class="table__container">
-        
+        <div class="fileinfo">
+          <input type="text" class="fileinfo__name" 
+          disabled
+          placeholder="File name"
+          >
+          <button onclick="saveTable()" class="fileinfo__smallbtn fileinfo__download" type="button">
+            <img src="./src/img/download.png" alt="Download table">
+          </button>
+          <button class="fileinfo__smallbtn fileinfo__clear" onclick="clearTable()" type="button">
+            <img src="./src/img/clear.svg" alt="Clear table">
+          </button>
+        </div>
+        <hr>
+        <div class="textinfo">
+          <button class="textinfo__smallbtn" onclick="setLeftAlign()" type="button">
+            <img src="./src/img/align-left.png" alt="Align left">
+          </button>
+          <button class="textinfo__smallbtn" onclick="setCenterAlign()" type="button">
+            <img src="./src/img/align-center.png" alt="Align center">
+          </button>
+          <button class="textinfo__smallbtn" onclick="setRightAlign()" type="button">
+            <img src="./src/img/align-right.png" alt="Align right">
+          </button>
+
+          <button class="textinfo__smallbtn" onclick="setBold()" type="button">
+            <img src="./src/img/bold.png" alt="Bold">
+          </button>
+          <button class="textinfo__smallbtn" onclick="setItalic()" type="button">
+            <img src="./src/img/italic.png" alt="Italic">
+          </button>
+          <button onclick="setColor()" class="textinfo__smallbtn" type="button">
+            <img src="./src/img/coloring.png" alt="Switch color">
+          </button>
+        </div>
+
+        <hr>
+
+        <div class="textedfit">
+          <button type="button" onclick="saveLine()" class="textedfit__smallbtn">
+            <img src="./src/img/save.png" alt="Save line">
+          </button>
+          <input 
+            type="text"
+            class="textedfit__field" name="text_edit"
+            placeholder="Select some box"
+          >
+        </div>
+
+        <hr>
+
+        <div class="table__container">
+          <div id="table" class="table">
+            
+          </div>
+        </div>
       </div>
     </main>
+
+    <script src="./src/scripts/table.js" type="module"></script>
+    <script src="./src/scripts/events.js" type="module"></script>
   </body>
 </html>
